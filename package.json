@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/kis9a/mongouse#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "mongoose": "^5.11.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
