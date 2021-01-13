@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  padding: 4px 8px;
+  margin: 6px;
+}
+
+.isClose {
+  display: none;
+}
+
+.isOpen {
+  display: block;
+}
+
+.m1 {
+  margin: 30px;
+}
+
+.m2 {
+  margin: 45px;
+}
+
+.p1 {
+  padding: 12px;
+}
+
+.p2 {
+  padding: 18px;
+}
+
+.flex {
+  display: flex;
+}
