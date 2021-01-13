@@ -18,7 +18,8 @@ class Counter extends React.Component {
   render() {
     return (
       <>
-        <div className="m1">
+        <div className="m1 component-state-counter">
+          <h2 className="mk mj component-name">State Counter</h2>
           <button onClick={this.toggle}>
             {this.state.open ? "Close" : "Open"}
           </button>
