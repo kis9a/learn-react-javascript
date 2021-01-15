@@ -5,9 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Counter from "./components/StateCounter";
 import {
-  EffectButtonClass,
-  EffectButtonFunction,
-} from "./components/EffectButton.jsx";
+  EffectCounterClass,
+  EffectCounterFunction,
+} from "./components/EffectCounter";
+import ContextCounter from "./components/ContextCounter";
+import ReducerCounter from "./components/ReducerCounter";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,15 +19,15 @@ ReactDOM.render(
     </div>
     <hr />
     <div className="flex">
-      <EffectButtonClass />
-      <EffectButtonFunction />
+      <EffectCounterClass />
+      <EffectCounterFunction />
     </div>
     <hr />
+    <ContextCounter />
+    <hr />
+    <ReducerCounter />
   </React.StrictMode>,
   document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

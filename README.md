@@ -1,6 +1,43 @@
+### Development
 
+- https://github.com/neoclide/coc-tsserver
+- https://github.com/neoclide/coc-prettier
+- https://github.com/neoclide/coc-eslint
 
-### references
+**coc-settings.json**
 
-- [memos/javascript](https://github.com/kis9a/notes/blob/master/memos/javascript.md)
-- [React hooksを基礎から理解する Qiita](https://qiita.com/seira/items/f063e262b1d57d7e78b4)
+```json
+[
+  {
+    "tsserver.enableJavascript": true,
+    "eslint.autoFixOnSave": true,
+    "javascript.suggest.autoImports": true,
+    "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact"]
+  }
+]
+```
+
+**Auto import suggest required**
+
+```
+brew install watchman
+```
+
+**jsconfig.json**
+
+```json
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "jspm_packages",
+    "tmp",
+    "temp"
+  ]
+}
+```

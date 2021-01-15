@@ -19,7 +19,7 @@ class Counter extends React.Component {
     return (
       <>
         <div className="m1 component-state-counter">
-          <h2 className="mk mj component-name">State Counter</h2>
+          <h2 className="mk component-name">State Counter</h2>
           <button onClick={this.toggle}>
             {this.state.open ? "Close" : "Open"}
           </button>
@@ -39,7 +39,7 @@ class Counter extends React.Component {
             </button>
             <button onClick={() => this.setState({ count: 0 })}>0</button>
             <button onClick={() => this.setState({ count: initialState })}>
-              Initialize
+              Reset
             </button>
           </div>
         </div>
