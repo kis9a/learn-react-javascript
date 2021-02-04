@@ -8,7 +8,7 @@ export default function ContextCounter() {
   useContext(NumberContext);
 
   return (
-    <div class="m1 component-use-context">
+    <div className="m1 component-use-context">
       <h2 className="mk component-name">Context Button</h2>
       <NumberContext.Provider value={count}>
         <div>

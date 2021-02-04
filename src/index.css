@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  padding: 4px 8px;
+  margin: 6px;
+}
+
+p {
+  margin: 6px;
+}
+
+hr {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.isClose {
+  display: none;
+}
+
+.isOpen {
+  display: block;
+}
+
+.m1 {
+  margin: 30px;
+}
+
+.m2 {
+  margin: 45px;
+}
+
+.mk {
+  margin-top: 16px;
+}
+
+.mj {
+  margin-bottom: 16px;
+}
+
+.p1 {
+  padding: 12px;
+}
+
+.pk {
+  padding-top: 8px;
+}
+
+.pl {
+  padding-right: 8px;
+}
+
+.ph {
+  padding-left: 8px;
+}
+
+
+.pj {
+  padding-bottom: 8px;
+}
+
+.p2 {
+  padding: 18px;
+}
+
+.flex {
+  display: flex;
+}
