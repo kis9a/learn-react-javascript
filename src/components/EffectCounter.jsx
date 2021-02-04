@@ -9,19 +9,19 @@ export class EffectCounterClass extends React.Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.count} times clicked`;
+    document.title = `${this.state.count}`;
   }
 
   componentDidUpdate() {
-    document.title = `${this.state.count} times clicked`;
+    document.title = `${this.state.count}`;
   }
 
   render() {
     return (
       <>
-        <div className="m1 component-effect-button">
-          <h2 className="mk component-name">Effect Counter</h2>
-          <p className="p1">{`${this.state.count} times clicked`}</p>
+        <div className="grid component-effect-button">
+          <h3 className="component-name">Effect Counter</h3>
+          <p>{`${this.state.count}`}</p>
           <button
             onClick={() => this.setState({ count: this.state.count + 1 })}
           >
@@ -37,14 +37,14 @@ export class EffectCounterClass extends React.Component {
 export const EffectCounterFunction = () => {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    document.title = `${count} times clicked`;
+    document.title = `${count}`;
   });
 
   return (
     <>
-      <div className="m1 component-effect-button">
-        <h2 className="mk component-name">Effect Counter</h2>
-        <p className="p1">{`${count} times clicked`}</p>
+      <div className="grid component-effect-button">
+        <h3 className="component-name">Effect Counter</h3>
+        <p>{`${count}`}</p>
         <button onClick={() => setCount((prev) => prev + 1)}>Button</button>
         <button onClick={() => setCount(0)}>Reset</button>
       </div>
