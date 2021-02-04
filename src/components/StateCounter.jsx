@@ -1,7 +1,6 @@
 import React from "react";
 
-// initialize random number 1~10
-const initialState = Math.floor(Math.random() * 10) + 1;
+const initialState = 0;
 
 class Counter extends React.Component {
   constructor(props) {
@@ -11,37 +10,22 @@ class Counter extends React.Component {
       open: true,
     };
   }
-  toggle = () => {
-    this.setState({ open: !this.state.open });
-  };
 
   render() {
     return (
       <>
-        <div className="m1 component-state-counter">
-          <h2 className="mk component-name">State Counter</h2>
-          <button onClick={this.toggle}>
-            {this.state.open ? "Close" : "Open"}
+        <div className="grid component-state-counter">
+          <h3 className="component-name">State Counter</h3>
+          <p>{this.state.count}</p>
+          <button
+            onClick={() => this.setState({ count: this.state.count + 1 })}
+          >
+            {" "}
+            Button{" "}
           </button>
-          <div className={this.state.open ? "isOpen" : "isClose"}>
-            <p className="p1">Current number is {this.state.count}</p>
-            <button
-              onClick={() => this.setState({ count: this.state.count + 1 })}
-            >
-              {" "}
-              + 1{" "}
-            </button>
-            <button
-              onClick={() => this.setState({ count: this.state.count - 1 })}
-            >
-              {" "}
-              - 1{" "}
-            </button>
-            <button onClick={() => this.setState({ count: 0 })}>0</button>
-            <button onClick={() => this.setState({ count: initialState })}>
-              Reset
-            </button>
-          </div>
+          <button onClick={() => this.setState({ count: initialState })}>
+            Reset
+          </button>
         </div>
       </>
     );

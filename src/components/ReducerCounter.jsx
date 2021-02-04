@@ -11,8 +11,6 @@ const reducerFunc = (countState, action) => {
   switch (action) {
     case "increment":
       return countState + 1;
-    case "decrement":
-      return countState - 1;
     case "reset":
       return initialState;
     default:
@@ -26,11 +24,10 @@ const ReducerCounter = () => {
   //カウント数とそれぞれのactioを実行する<button/>を設置する
   return (
     <>
-      <div className="m1 component-state-counter">
-        <h2 className="mk component-name">Reducer Counter</h2>
-        <p className="p1">{count} times clicked</p>
-        <button onClick={() => dispatch("increment")}>+1</button>
-        <button onClick={() => dispatch("decrement")}>-1</button>
+      <div className="grid component-state-counter">
+        <h3 className="component-name">Reducer Counter</h3>
+        <p>{count}</p>
+        <button onClick={() => dispatch("increment")}>Button</button>
         <button onClick={() => dispatch("reset")}>Reset</button>
       </div>
     </>

@@ -12,19 +12,24 @@ import "./index.css";
 
 function Hooks() {
   return (
-    <div>
-      <div className="flex">
-        <Counter />
-      </div>
-      <hr />
-      <div className="flex">
-        <EffectCounterClass />
-        <EffectCounterFunction />
-      </div>
-      <hr />
+    <div className="p1 flex hooks">
+      <Counter />
+      <EffectCounterClass />
+      <EffectCounterFunction />
       <ContextCounter />
-      <hr />
       <ReducerCounter />
+      <style>
+        {
+          "\
+        .hooks{\
+          display: grid;\
+          width: 90%;\
+          grid-template-columns:  1fr 1fr 1fr;\
+          grid-gap: 16px;\
+        }\
+      "
+        }
+      </style>
     </div>
   );
 }
@@ -41,23 +46,38 @@ function App() {
   return (
     <Router>
       <React.StrictMode>
-        <div className="header m1">
+        <div className="m0 header">
           <Link className="pl" to={"/"}>
             Home
           </Link>
           <Link className="pl" to={"/hooks"}>
-            Learn React hooks
+            Hooks
           </Link>
         </div>
-        <div className="m1">
+        <div className="content">
           <Switch>
             <Route path="/" component={Top} exact />
             <Route path="/hooks" component={Hooks} exact />
           </Switch>
         </div>
+        <style>
+          {
+            "\
+        .content{\
+          display: flex;\
+          justify-content: center;\
+        }\
+      "
+          }
+        </style>
       </React.StrictMode>
     </Router>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);

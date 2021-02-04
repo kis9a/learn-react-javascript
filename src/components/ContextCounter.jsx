@@ -8,8 +8,8 @@ export default function ContextCounter() {
   useContext(NumberContext);
 
   return (
-    <div className="m1 component-use-context">
-      <h2 className="mk component-name">Context Button</h2>
+    <div className="grid component-use-context">
+      <h3 className="component-name">Context Counter</h3>
       <NumberContext.Provider value={count}>
         <div>
           <Display />
@@ -25,9 +25,7 @@ function Display() {
   // Use the Consumer to grab the value from context
   // Notice this component didn't get any props!
   return (
-    <NumberContext.Consumer>
-      {(value) => <p className="p1">{value} times clicked.</p>}
-    </NumberContext.Consumer>
+    <NumberContext.Consumer>{(value) => <p>{value}</p>}</NumberContext.Consumer>
   );
 }
 
