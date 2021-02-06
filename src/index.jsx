@@ -1,39 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import storeTodo from "./store/todo";
+import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Counter from "./components/StateCounter";
-import {
-  EffectCounterClass,
-  EffectCounterFunction,
-} from "./components/EffectCounter";
-import ContextCounter from "./components/ContextCounter";
-import ReducerCounter from "./components/ReducerCounter";
+import Hooks from "./pages/hooks";
+import Todos from "./pages/todos";
 import "normalize.css";
 import "./index.css";
-
-function Hooks() {
-  return (
-    <div className="p1 flex hooks">
-      <Counter />
-      <EffectCounterClass />
-      <EffectCounterFunction />
-      <ContextCounter />
-      <ReducerCounter />
-      <style>
-        {
-          "\
-        .hooks{\
-          display: grid;\
-          width: 90%;\
-          grid-template-columns:  1fr 1fr 1fr;\
-          grid-gap: 16px;\
-        }\
-      "
-        }
-      </style>
-    </div>
-  );
-}
 
 function Top() {
   return (
@@ -54,11 +27,15 @@ function App() {
           <Link className="pl" to={"/hooks"}>
             Hooks
           </Link>
+          <Link className="pl" to={"/todos"}>
+            Todos
+          </Link>
         </div>
         <div className="content">
           <Switch>
             <Route path="/" component={Top} exact />
             <Route path="/hooks" component={Hooks} exact />
+            <Route path="/todos" component={Todos} exact />
           </Switch>
         </div>
         <style>
@@ -78,7 +55,9 @@ function App() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={storeTodo}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
