@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "experimentalDecorators": true
+    "javascript.implicitProjectConfig.experimentalDecorators": true
+  },
+  "exclude": ["node_modules"]
+}
