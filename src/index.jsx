@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Hooks from "./pages/hooks";
 import Todos from "./pages/todos";
+import Docs from "./pages/docs";
 // [vite] Internal server error: unknown: Support for the experimental syntax 'decorators-legacy' isn't currently enabled (8:3):
 // import MboxP from "./pages/mobx";
 import "normalize.css";
@@ -32,6 +33,9 @@ function App() {
           <Link className="pl" to={"/todos"}>
             Todos
           </Link>
+          <Link className="pl" to={"/docs"}>
+            Docs
+          </Link>
           //{" "}
         </div>
         <div className="content">
@@ -39,6 +43,7 @@ function App() {
             <Route path="/" component={Top} exact />
             <Route path="/hooks" component={Hooks} exact />
             <Route path="/todos" component={Todos} exact />
+            <Route path="/docs" component={Docs} exact />
           </Switch>
         </div>
         <style>
