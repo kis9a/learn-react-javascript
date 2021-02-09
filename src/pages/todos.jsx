@@ -1,6 +1,7 @@
 import React from "react";
-import AddTodo from "../components/todos/AddTodo";
-import Mbox from "../components/mbox/Mbox";
+// import AddTodo from "../components/todos/AddTodo";
+// import Mbox from "../components/mbox/Mbox";
+import { SimpleTodo, SimpleTodo2 } from "../components/todos/SimpleTodo";
 
 // const getVisibleTodos = (todos, filter) => {
 // import TodoList from "../components/todos/TodoList.jsx";
@@ -32,8 +33,7 @@ import Mbox from "../components/mbox/Mbox";
 function Todos() {
   return (
     <div>
-      <AddTodo />
-      <Mbox />
+      <SimpleTodo2 />
     </div>
   );
 }

@@ -91,10 +91,15 @@ hr {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .grid {
   display: grid;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 
